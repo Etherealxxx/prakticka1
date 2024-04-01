@@ -1,0 +1,42 @@
+﻿<Page x:Class="prakticka1.AccountEF"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:prakticka1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AccountEF">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto" MinWidth="84.943"/>
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="frame" Margin="5,5,5,5" NavigationUIVisibility="Hidden"/>
+        <DataGrid x:Name="Steam"/>
+        <Button
+      x:Name="left"
+      Content="GamesEF"
+      IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+      Style="{StaticResource MaterialDesignRaisedDarkButton}"
+      ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Margin="5,5,5,5" Click="LeftClick2"
+      Grid.Row="1"
+        Grid.Column="0"
+/>
+        <Button
+      x:Name="right"
+      Content="FriendsEF"
+      IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+      Style="{StaticResource MaterialDesignFlatMidBgButton}"
+      ToolTip="MaterialDesignFlatMidButton" Margin="5,5,5,5" Click="RightClick2"
+      Grid.Row="1"
+      Grid.Column="1"
+/>
+        <DataGrid x:Name="AccountEFDataGrid"/>
+    </Grid>
+</Page>
